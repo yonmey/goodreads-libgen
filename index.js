@@ -7,7 +7,7 @@ const btnStyle = `width:100%;height:28px;background:darkmagenta;font-family:inhe
 const btnTitle = 'Search on Libgen';
 
 // SEARCH URL
-const searchURL = bookTitle => `http://gen.lib.rus.ec/search.php?req=${bookTitle}&column=title`;
+const searchURL = bookTitle => `http://gen.lib.rus.ec/search.php?req=${escape(bookTitle)}&column=title`;
 
 // BOOK INFORMATION
 const bookTitle = document.querySelector(bookTitleSelector).childNodes[0].textContent.trim();
